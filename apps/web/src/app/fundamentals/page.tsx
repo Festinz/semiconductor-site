@@ -29,8 +29,17 @@ const CARDS = [
     color: "#3b82f6",
   },
   {
+    emoji: "📖",
+    title: "5대 공정 변천사",
+    subtitle: "목차형 슬라이드 · 키보드 네비게이션",
+    desc: "devops 강의 스타일 — 사이드바 목차 + 페이지 전환으로 5대 공정을 순서대로 학습",
+    tip: "★ ← → 키보드로 슬라이드 이동, 사이드바 목차 클릭",
+    href: "/fundamentals/process",
+    color: "#0ea5e9",
+  },
+  {
     emoji: "⚙️",
-    title: "5대 공정",
+    title: "5대 공정 상세",
     subtitle: "Photo · Etch · Diffusion · Thin Film · CMP",
     desc: "반도체 제조의 핵심 5단계 공정 — 각각의 원리, 파라미터, 면접 포인트",
     tip: "★ PR 구성요소, Wet/Dry 식각, ALD Self-limitation",
