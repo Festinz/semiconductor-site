@@ -1,0 +1,169 @@
+{
+  "company": "samsung",
+  "brandColor": "#1428A0",
+  "slogan": "초격차 IDM 토털 솔루션",
+  "division": "DS부문",
+  "leader": "전영현 부회장",
+  "marketCap": "1,000조원",
+  "revenue": "333.6조원",
+  "updatedAt": "2026-03-28",
+  "lineups": {
+    "HBM4": {
+      "name": "HBM4",
+      "fullName": "High Bandwidth Memory 4",
+      "status": "양산 출하 중",
+      "statusDate": "2026.02",
+      "milestone": "세계 최초 양산 출하",
+      "specs": {
+        "pinSpeed": { "value": "11.7 Gbps", "max": "13 Gbps", "unit": "Gbps" },
+        "bandwidth": { "value": "~1.5 TB/s", "unit": "TB/s" },
+        "capacity": { "value": "36GB", "stack": "12-Hi", "unit": "GB" },
+        "baseDie": "자체 4nm",
+        "jedecTarget": "8 Gbps",
+        "powerEfficiency": null,
+        "processNode": "4nm (자체 파운드리)"
+      },
+      "differentiator": "DTCO + IDM 통합 (메모리+베이스다이+패키징 원스톱)",
+      "nextGen": {
+        "name": "HBM4E",
+        "pinSpeed": "16 Gbps",
+        "bandwidth": "4.0 TB/s",
+        "milestone": "GTC 2026 실물 최초 공개"
+      },
+      "packaging": {
+        "type": "X-Cube + HCB",
+        "hcbBenefit": "열저항 20%↓, 16단+ 가능",
+        "customHBM": "2027년~ Custom HBM 제공 예정"
+      },
+      "competitorComparison": {
+        "company": "hynix",
+        "pinSpeed": "11.7 Gbps",
+        "bandwidth": "~1.5 TB/s",
+        "capacity": "36GB (12-Hi)",
+        "baseDie": "TSMC 위탁",
+        "status": "최종 샘플 단계",
+        "differentiator": "MR-MUF + 수율 80%",
+        "marketShare": "~70% (UBS)"
+      }
+    },
+    "DDR5": {
+      "name": "DDR5",
+      "fullName": "Double Data Rate 5",
+      "status": "양산 중",
+      "milestone": "세계 최초 High-K Metal Gate DDR5",
+      "specs": {
+        "pinSpeed": { "value": "8.4+ Gbps", "unit": "Gbps" },
+        "bandwidth": null,
+        "capacity": null,
+        "jedecTarget": "6.4 Gbps",
+        "powerEfficiency": null,
+        "processNode": null
+      },
+      "coreTechnology": {
+        "name": "High-K Metal Gate",
+        "highK": {
+          "material": "HfO₂",
+          "dielectricConstant": "~20",
+          "replaces": "SiO₂ (유전율 3.9)",
+          "benefit": "누설전류 대폭 감소, 게이트 산화막 두껍게 가능"
+        },
+        "metalGate": {
+          "material": "TiN / TaN",
+          "replaces": "Poly-Si",
+          "benefit": "Depletion 문제 해결"
+        }
+      },
+      "differentiator": "High-K Metal Gate 세계 최초 적용",
+      "competitorComparison": {
+        "company": "hynix",
+        "pinSpeed": "8.4~9.0 Gbps",
+        "coreTechnology": "DVFS (Dynamic Voltage and Frequency Scaling)",
+        "jedecTarget": "6.4 Gbps"
+      }
+    },
+    "GDDR7": {
+      "name": "GDDR7",
+      "fullName": "Graphics DDR7",
+      "status": "양산 중",
+      "specs": {
+        "pinSpeed": { "value": "32 Gbps", "unit": "Gbps" },
+        "bandwidth": null,
+        "capacity": { "value": "36GB", "perChip": true, "unit": "GB" },
+        "jedecTarget": "36GB",
+        "powerEfficiency": null,
+        "processNode": null
+      },
+      "differentiator": null,
+      "competitorComparison": {
+        "company": "hynix",
+        "pinSpeed": "32 Gbps+",
+        "capacity": "48GB (+33%, 세계 최초)",
+        "differentiator": "불가능의 영역을 이미 깬 것 — GPU 양쪽 4개씩 연결"
+      }
+    },
+    "LPDDR6": {
+      "name": "LPDDR6",
+      "fullName": "Low Power DDR6",
+      "status": "개발 중",
+      "specs": {
+        "pinSpeed": null,
+        "bandwidth": null,
+        "capacity": null,
+        "jedecTarget": null,
+        "powerEfficiency": null,
+        "processNode": "1c 10nm급"
+      },
+      "differentiator": null,
+      "dvfs": false,
+      "competitorComparison": {
+        "company": "hynix",
+        "dvfs": true,
+        "powerReduction": "20%↓",
+        "speedIncrease": "전세대 대비 +33%",
+        "processNode": "1c 10nm급",
+        "useCase": "스마트폰, 가정용 로봇",
+        "subChannel": "필요 경로만 선택 운용"
+      }
+    },
+    "NAND": {
+      "name": "NAND Flash",
+      "fullName": "NAND Flash Memory",
+      "status": "차세대 개발 중",
+      "specs": {
+        "pinSpeed": null,
+        "bandwidth": null,
+        "capacity": null,
+        "jedecTarget": null,
+        "powerEfficiency": null,
+        "processNode": null
+      },
+      "keyProduct": {
+        "name": "PM9E1",
+        "type": "차세대 SSD",
+        "milestone": "GTC 2026 공개"
+      },
+      "differentiator": "PM9E1 차세대 SSD (GTC 2026 공개)",
+      "competitorComparison": {
+        "company": "hynix",
+        "note": "해당 시기 주요 공개 정보 없음"
+      }
+    }
+  },
+  "foundry": {
+    "name": "2nm GAA (MBCFET™)",
+    "processNode": "2nm",
+    "gateStructure": "GAA (Gate-All-Around) / MBCFET™",
+    "yield": "60%+ (2026.03 기준)",
+    "yieldProgress": "반년 만에 20% → 60%",
+    "competitorYield": "TSMC N2: 60~70%"
+  },
+  "packaging": {
+    "name": "X-Cube + HCB",
+    "advantage": "IDM 강점: 메모리 + 베이스다이 + 패키징 원스톱",
+    "hcb": {
+      "name": "Hybrid Copper Bonding",
+      "benefit": "열저항 20%↓",
+      "stackSupport": "16단+"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "company": "hynix",
+  "brandColor": "#E4002B",
+  "slogan": "풀 스택 AI 메모리 크리에이터",
+  "leader": "최태원 회장",
+  "operatingProfit2024": "23조원",
+  "milestone2025Q1": "D램 점유율 1위",
+  "updatedAt": "2026-03-28",
+  "coreStory": "삼성에서 GDDR 샀고 하이닉스에서 HBM 샀는데, 하이닉스가 둘 다 독점해버림",
+  "lineups": {
+    "HBM4": {
+      "name": "HBM4",
+      "fullName": "High Bandwidth Memory 4",
+      "status": "최종 샘플 단계",
+      "hbmHistory": "HBM1(2013) → HBM2(2016) → HBM2E(2018) → HBM3(2022) → HBM3E(2024) → HBM4(2026)",
+      "milestone": "세계 최초 개발 (2013) — 부동의 1위",
+      "specs": {
+        "pinSpeed": { "value": "11.7 Gbps", "unit": "Gbps" },
+        "bandwidth": { "value": "~1.5 TB/s", "unit": "TB/s" },
+        "capacity": { "value": "36GB", "stack": "12-Hi", "unit": "GB" },
+        "hbm3eYield": "80%",
+        "marketShare": "~70% (UBS)",
+        "baseDie": "TSMC 위탁",
+        "price12Hi36GB": "~500$",
+        "jedecTarget": "8 Gbps",
+        "powerEfficiency": null,
+        "processNode": null,
+        "production": "M16/M15X 가동"
+      },
+      "differentiator": "MR-MUF (Mass Reflow Molded Underfill)",
+      "tsmcPartnership": "로직다이 + 패키징 MOU",
+      "competitorComparison": {
+        "company": "samsung",
+        "pinSpeed": "11.7 Gbps (최대 13 Gbps)",
+        "bandwidth": "~1.5 TB/s",
+        "capacity": "36GB (12-Hi)",
+        "baseDie": "자체 4nm",
+        "status": "양산 출하 중 (2026.02)",
+        "differentiator": "DTCO + IDM 통합 + HCB (열저항 20%↓)"
+      }
+    },
+    "DDR5": {
+      "name": "DDR5",
+      "fullName": "Double Data Rate 5",
+      "status": "양산 중",
+      "specs": {
+        "pinSpeed": { "value": "8.4~9.0 Gbps", "unit": "Gbps" },
+        "bandwidth": null,
+        "capacity": null,
+        "jedecTarget": "6.4 Gbps",
+        "powerEfficiency": null,
+        "processNode": null
+      },
+      "coreTechnology": {
+        "name": "DVFS",
+        "fullName": "Dynamic Voltage and Frequency Scaling",
+        "benefit": "부하에 따라 전압/주파수 실시간 조절 → 전력 효율 극대화"
+      },
+      "differentiator": "DVFS 적용 — 부하 기반 실시간 전력 최적화",
+      "competitorComparison": {
+        "company": "samsung",
+        "pinSpeed": "8.4+ Gbps",
+        "coreTechnology": "High-K Metal Gate (HfO₂ + TiN/TaN)",
+        "jedecTarget": "6.4 Gbps"
+      }
+    },
+    "GDDR7": {
+      "name": "GDDR7",
+      "fullName": "Graphics DDR7",
+      "status": "양산 중",
+      "milestone": "판도 변화 — HBM + GDDR 양쪽 독점",
+      "specs": {
+        "pinSpeed": { "value": "32 Gbps+", "unit": "Gbps" },
+        "bandwidth": null,
+        "capacity": { "value": "48GB", "perChip": true, "note": "세계 최초, +33%", "unit": "GB" },
+        "jedecTarget": "36GB",
+        "powerEfficiency": null,
+        "processNode": null
+      },
+      "differentiator": "48GB 세계 최초 — 불가능의 영역을 이미 깬 것, GPU 양쪽 4개씩 연결",
+      "competitorComparison": {
+        "company": "samsung",
+        "pinSpeed": "32 Gbps",
+        "capacity": "36GB"
+      }
+    },
+    "LPDDR6": {
+      "name": "LPDDR6",
+      "fullName": "Low Power DDR6",
+      "status": "개발 중",
+      "specs": {
+        "pinSpeed": null,
+        "bandwidth": null,
+        "capacity": null,
+        "jedecTarget": null,
+        "powerEfficiency": { "value": "20%↓ (DVFS)", "unit": "%" },
+        "speedIncrease": "+33% vs 전세대",
+        "processNode": "1c 10nm급"
+      },
+      "coreTechnology": {
+        "dvfs": true,
+        "subChannel": "필요 경로만 선택 운용",
+        "useCase": ["스마트폰", "가정용 로봇"]
+      },
+      "differentiator": "DVFS 적용 — 전력 20%↓ + 속도 33%↑ + 서브채널 선택 운용",
+      "competitorComparison": {
+        "company": "samsung",
+        "dvfs": false,
+        "note": "DVFS 미적용"
+      }
+    },
+    "NAND": {
+      "name": "NAND Flash",
+      "fullName": "NAND Flash Memory",
+      "status": "양산 중",
+      "specs": {
+        "pinSpeed": null,
+        "bandwidth": null,
+        "capacity": null,
+        "jedecTarget": null,
+        "powerEfficiency": null,
+        "processNode": null
+      },
+      "differentiator": null,
+      "competitorComparison": {
+        "company": "samsung",
+        "keyProduct": "PM9E1 차세대 SSD (GTC 2026 공개)"
+      }
+    }
+  },
+  "futureTech": [
+    {
+      "name": "실리콘 포토닉스",
+      "description": "빛으로 데이터 전송",
+      "benefit": "전기 신호 한계 돌파, 대역폭 극대화"
+    },
+    {
+      "name": "극저온 식각",
+      "description": "3배 빠름, 가스 90%↓",
+      "benefit": "친환경 + 공정 속도 혁신"
+    },
+    {
+      "name": "유리 기판",
+      "description": "HBM 발열 해결",
+      "benefit": "기존 유기 기판 대비 열전도율 우수, 미세배선 가능"
+    }
+  ]
+}

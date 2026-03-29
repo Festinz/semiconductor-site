@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm --filter web build)",
+      "Bash(pnpm build:*)",
+      "Bash(vercel env:*)",
+      "Bash(vercel link:*)",
+      "Bash(vercel:*)",
+      "Bash(rm:*)",
+      "Bash(curl -s \"https://semiconductor-site-nine.vercel.app/api/cron/fetch-news\")",
+      "Bash(curl:*)",
+      "Bash(npm ls:*)",
+      "Bash(pnpm --filter web add @vercel/blob)",
+      "Read(//c/Users/scj94/.local/share/com.vercel.cli/**)",
+      "Read(//c/Users/scj94/AppData/Roaming/com.vercel.cli/**)",
+      "Bash(ls -lhS C:/Users/scj94/semiconductor-tech-hub/apps/web/.next/static/chunks/*.js)",
+      "Bash(wc:*)",
+      "Bash(node -e \"const c=[];process.stdin.on\\(''''data'''',d=>c.push\\(d\\)\\);process.stdin.on\\(''''end'''',\\(\\)=>{const r=JSON.parse\\(Buffer.concat\\(c\\).toString\\(\\)\\);console.log\\(r.length,''''건''''\\);r.slice\\(0,3\\).forEach\\(n=>console.log\\('''' -'''',n.title,''''[''''+n.category+'''']''''\\)\\);}\\);\")",
+      "Bash(node -e \"const c=[];process.stdin.on\\(''''data'''',d=>c.push\\(d\\)\\);process.stdin.on\\(''''end'''',\\(\\)=>{const r=JSON.parse\\(Buffer.concat\\(c\\).toString\\(\\)\\);console.log\\(r.length,''''건''''\\);r.forEach\\(t=>console.log\\('''' -'''',t.title\\)\\);}\\);\")",
+      "Bash(printf \"Y\\\\n\\\\n\")",
+      "Bash(printf \"Y\\\\na\\\\n\\\\n\")",
+      "Bash(printf \"Y\\\\r\\\\n\\\\r\\\\n\")",
+      "Bash(TOKEN=\"vca_1yH3LAYkLaTB5s2fCy3ATcipFT9b2NeFt6GbforKctE6WIpdp33oi4cz\")",
+      "Bash(npx vercel:*)",
+      "Bash(pip install:*)",
+      "Bash(python -c \":*)",
+      "WebFetch(domain:lecture-devops.pages.dev)",
+      "Bash(pnpm run:*)"
+    ]
+  }
+}

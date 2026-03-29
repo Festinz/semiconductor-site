@@ -1,0 +1,256 @@
+{
+  "updatedAt": "2026-03-28",
+  "topics": [
+    {
+      "id": "mosfet-evolution",
+      "title": "MOSFET 변천사",
+      "slug": "mosfet-evolution",
+      "subtitle": "Planar → FinFET → GAA/MBCFET",
+      "summary": "트랜지스터 게이트 구조의 진화: 채널을 감싸는 면의 수가 1면 → 3면 → 4면으로 증가하며, 전류 제어력과 누설 억제력이 향상되었습니다.",
+      "analogy": "수도꼭지의 진화 — 위에서만 누르던 것(Planar) → 3면에서 감싸는 것(FinFET) → 완전히 둘러싸는 것(GAA). 감싸는 면이 많을수록 물(전류)을 정밀하게 조절 가능.",
+      "generations": [
+        {
+          "name": "Planar MOSFET",
+          "gateSides": 1,
+          "analogy": "층층이 아파트 1면: 위에서만 누르는 수도꼭지",
+          "era": "~ 22nm",
+          "description": "게이트가 채널 위쪽 1면만 접촉. 미세화 한계에서 누설전류 급증.",
+          "limitation": "채널 길이 축소 시 Short Channel Effect → 전류 제어 불가"
+        },
+        {
+          "name": "FinFET",
+          "gateSides": 3,
+          "analogy": "물고기 지느러미처럼 세워진 채널을 3면에서 감싸는 게이트",
+          "era": "22nm ~ 5nm",
+          "description": "채널을 수직으로 세워(Fin) 게이트가 3면을 감쌈. 인텔이 22nm에서 최초 도입.",
+          "advantage": "전류 제어력 대폭 향상, 누설전류 감소, 동일 면적에서 더 많은 전류"
+        },
+        {
+          "name": "GAA (Gate-All-Around) / MBCFET™",
+          "gateSides": 4,
+          "analogy": "층층이 아파트: 채널이 나노시트/나노와이어 형태로 쌓이고, 게이트가 4면을 완전히 둘러쌈",
+          "era": "3nm ~",
+          "description": "나노시트(Nanosheet) 또는 나노와이어를 게이트가 완전히 감쌈. 삼성의 MBCFET™은 Multi-Bridge Channel FET.",
+          "advantage": "최고의 전류 제어, 누설 최소화, 나노시트 폭 조절로 성능/전력 트레이드오프 가능",
+          "samsung": {
+            "name": "MBCFET™",
+            "node": "2nm 파운드리",
+            "yield2026": "60%+ (반년 만에 20% → 60%)",
+            "tsmcComparison": "TSMC N2: 60~70%"
+          }
+        }
+      ],
+      "interviewPoints": [
+        "★ 반드시 1면 → 3면 → 4면으로 채널 제어가 강화되는 흐름을 그림으로 설명할 수 있어야 함",
+        "★ 각 세대가 등장한 이유: 이전 세대의 한계(누설전류, SCE)를 극복하기 위함",
+        "★ GAA에서 나노시트 폭을 조절하면 성능과 전력의 트레이드오프가 가능한 이유",
+        "★ 삼성 MBCFET vs TSMC GAA의 구조적 차이를 아는 것은 가산점",
+        "★ 다음 세대: CFET (Complementary FET) — nFET과 pFET을 수직으로 쌓는 구조"
+      ]
+    },
+    {
+      "id": "high-k-metal-gate",
+      "title": "High-K Metal Gate",
+      "slug": "high-k-metal-gate",
+      "subtitle": "누설전류 해결의 결정적 전환점",
+      "summary": "게이트 산화막을 SiO₂에서 High-K 물질(HfO₂)로, 게이트 전극을 Poly-Si에서 금속(TiN/TaN)으로 교체하여 누설전류를 획기적으로 줄인 기술.",
+      "analogy": "집의 단열재와 문 교체 — 얇은 유리창(SiO₂)을 두꺼운 이중창(HfO₂)으로 바꾸고, 나무 문(Poly-Si)을 철문(Metal Gate)으로 교체한 것.",
+      "twoComponents": [
+        {
+          "name": "High-K 유전체",
+          "problem": "SiO₂ 유전율 3.9 → 미세화 시 산화막이 너무 얇아져 터널링 누설전류 급증",
+          "solution": "HfO₂ (유전율 15~25) 또는 ZrO₂로 교체",
+          "benefit": "물리적으로 두꺼운 막 유지 가능 → 터널링 억제, 동시에 전기적으로는 얇은 막과 동일한 채널 구동력 확보",
+          "formula": "EOT (Equivalent Oxide Thickness) = t_physical × (3.9 / k_high)"
+        },
+        {
+          "name": "Metal Gate (금속 게이트)",
+          "problem": "Poly-Si 게이트에서 공핍층(Depletion) 형성 → 실질 산화막 두께 증가 → 성능 저하",
+          "solution": "TiN / TaN 등 금속 전극으로 교체",
+          "benefit": "공핍층 문제 완전 해결 + Work Function 정밀 조절 가능"
+        }
+      ],
+      "samsungApplication": {
+        "product": "DDR5",
+        "milestone": "세계 최초 High-K Metal Gate DDR5",
+        "effect": "누설전류 대폭↓ → 고속(8.4+ Gbps)에서도 안정적 동작"
+      },
+      "depositionMethod": "ALD (Atomic Layer Deposition) — HfO₂를 원자 한 층씩 정밀 증착",
+      "interviewPoints": [
+        "★★★ 반드시 High-K와 Metal Gate를 분리해서 답할 것! 둘은 다른 문제를 해결하는 다른 기술",
+        "★ High-K: SiO₂의 터널링 누설전류 문제 → 유전율 높은 물질로 교체 → 두꺼운 막 유지 가능",
+        "★ Metal Gate: Poly-Si의 Depletion 문제 → 금속으로 교체 → 공핍층 제거",
+        "★ EOT 개념을 수식과 함께 설명할 수 있으면 확실한 가산점",
+        "★ ALD로 증착하는 이유: 원자 단위 두께 제어가 필수이므로",
+        "★ 최근 GAA 수율 이슈 때문에 High-K Metal Gate의 중요성이 더 커지고 있음"
+      ]
+    },
+    {
+      "id": "leakage-current",
+      "title": "누설전류 종류와 솔루션",
+      "slug": "leakage-current",
+      "subtitle": "OFF여야 하는데 흐르는 전류 — 5가지 유형과 대응 기술",
+      "summary": "트랜지스터가 OFF 상태에서도 흐르는 다양한 누설전류는 소비전력 증가와 발열의 주범. 각 누설 메커니즘에 맞는 구조적/물질적 솔루션이 존재합니다.",
+      "analogy": "수도꼭지를 잠갔는데 물이 새는 것 — 5군데에서 각각 다른 이유로 새고, 각각 다른 수리 방법이 필요.",
+      "types": [
+        {
+          "name": "HCI (Hot Carrier Injection)",
+          "description": "채널 내 고에너지 전자(핫 캐리어)가 게이트 산화막에 주입되어 특성 열화",
+          "cause": "짧은 채널에서 높은 전계 → 전자 가속 → 산화막 주입",
+          "solution": "LDD (Lightly Doped Drain) — 드레인 근처 전계 완화",
+          "severity": "신뢰성 이슈 (시간 경과에 따른 열화)"
+        },
+        {
+          "name": "Gate Oxide Tunneling",
+          "description": "게이트 산화막이 너무 얇아 전자가 양자역학적으로 터널링하여 통과",
+          "cause": "SiO₂ 두께 < 2nm 시 급격히 증가",
+          "solution": "High-K 유전체 (HfO₂) — 물리적 두께 유지하며 전기적 특성 확보",
+          "severity": "미세화의 최대 장벽 중 하나"
+        },
+        {
+          "name": "DIBL (Drain-Induced Barrier Lowering)",
+          "description": "드레인 전압이 소스-채널 간 장벽을 낮추어 OFF 상태에서 전류 흐름",
+          "cause": "Short Channel Effect — 채널이 짧아지면 드레인 전계가 소스까지 영향",
+          "solution": "Halo Doping (역방향 도핑으로 장벽 유지) + FinFET/GAA 구조",
+          "severity": "전력 소비 직접 증가"
+        },
+        {
+          "name": "GIDL (Gate-Induced Drain Leakage)",
+          "description": "게이트-드레인 중첩 영역에서 강한 전계로 Band-to-Band Tunneling 발생",
+          "cause": "OFF 상태에서 게이트-드레인 간 전압 차이가 클 때",
+          "solution": "게이트-드레인 중첩 최소화 + 저농도 도핑",
+          "severity": "DRAM Retention time 저하의 주범"
+        },
+        {
+          "name": "Punch-through",
+          "description": "소스와 드레인의 공핍영역이 채널 하부에서 만나 직접 전류 경로 형성",
+          "cause": "채널 길이가 매우 짧을 때",
+          "solution": "채널 하부 Punch-through stop 이온주입 + GAA 구조",
+          "severity": "소자 완전 고장"
+        }
+      ],
+      "solutionEvolution": [
+        { "era": "초기", "solution": "LDD (Lightly Doped Drain)", "target": "HCI" },
+        { "era": "중기", "solution": "Halo Doping", "target": "DIBL, Punch-through" },
+        { "era": "현재", "solution": "High-K Metal Gate", "target": "Gate Oxide Tunneling" },
+        { "era": "최신", "solution": "GAA / MBCFET", "target": "모든 Short Channel Effect 종합 대응" }
+      ],
+      "interviewPoints": [
+        "★ 5가지 누설전류를 각각 한 문장으로 설명할 수 있어야 함",
+        "★ 각 누설전류와 대응 솔루션을 1:1 매칭할 수 있어야 함",
+        "★ GIDL이 DRAM retention에 왜 치명적인지 — 커패시터 전하 유지 시간 감소",
+        "★ 솔루션 진화 흐름: LDD → Halo → High-K MG → GAA — 이 흐름이 MOSFET 변천사와 직결",
+        "★ Gate Oxide Tunneling이 High-K 도입의 직접적 원인이라는 연결고리"
+      ]
+    },
+    {
+      "id": "3d-dram",
+      "title": "3D DRAM",
+      "slug": "3d-dram",
+      "subtitle": "1T1C 셀 구조와 수직 적층의 미래",
+      "summary": "기존 2D 평면 DRAM의 미세화 한계를 극복하기 위해, NAND처럼 DRAM도 수직으로 쌓는 3D DRAM 기술이 차세대 패러다임으로 부상하고 있습니다.",
+      "analogy": "아파트 vs 단독주택 — 더 이상 땅(평면)을 줄일 수 없으면 층수(수직)를 늘려야 한다. 3D NAND가 이미 증명한 방법을 DRAM에도 적용.",
+      "currentDRAM": {
+        "structure": "1T1C (1 Transistor + 1 Capacitor)",
+        "transistorRole": "스위치 — 데이터 읽기/쓰기 제어",
+        "capacitorRole": "데이터 저장 — 전하(0/1) 보관",
+        "limitation": "미세화 시 커패시터 용량 유지 어려움 + 누설전류 증가 → Refresh 빈도 ↑ → 전력 소비 ↑"
+      },
+      "threeDApproaches": [
+        {
+          "name": "CUA (CMOS Under Array)",
+          "description": "CMOS 로직을 DRAM 어레이 아래에 배치하여 면적 효율 극대화",
+          "benefit": "기존 대비 30~50% 면적 절감, 신호 경로 단축",
+          "status": "양사 적극 개발 중"
+        },
+        {
+          "name": "수직 채널 DRAM",
+          "description": "NAND처럼 트랜지스터와 커패시터를 수직으로 적층",
+          "benefit": "스케일링 한계 근본적 해결",
+          "challenge": "커패시터를 수직으로 쌓으면서 용량 유지가 핵심 과제"
+        }
+      ],
+      "keyTechnologies": [
+        { "name": "High-K 유전체", "role": "커패시터 유전막 — ZrO₂, HfO₂로 용량 확보" },
+        { "name": "ALD", "role": "수직 구조 내 균일한 박막 형성" },
+        { "name": "극저온 식각", "role": "고종횡비 수직 홀 식각" },
+        { "name": "EUV", "role": "미세 패턴 형성" }
+      ],
+      "interviewPoints": [
+        "★ 1T1C 구조에서 T와 C의 역할을 명확히 구분하여 설명",
+        "★ 왜 3D DRAM이 필요한지: 2D 스케일링 한계 (커패시터 용량↓, 누설↑, Refresh↑)",
+        "★ CUA(CMOS Under Array) 개념과 장점 — 면접에서 최신 트렌드로 가산점",
+        "★ 3D NAND와 3D DRAM의 유사점과 차이점 — DRAM은 커패시터 용량 유지가 추가 과제",
+        "★ GIDL이 DRAM Retention에 미치는 영향 — 누설전류 토픽과 연계"
+      ]
+    },
+    {
+      "id": "spc-fdc",
+      "title": "SPC/FDC 품질 관리",
+      "slug": "spc-fdc",
+      "subtitle": "데이터 기반 반도체 제조 품질 관리 체계",
+      "summary": "통계적 공정 관리(SPC)와 설비 데이터 수집/분석(FDC)을 통해 공정 이상을 사전에 감지하고 수율을 관리하는 체계. 반도체 스마트팩토리의 핵심입니다.",
+      "analogy": "자동차 정비 기록 — SPC는 자동차의 주행 기록과 점검 이력으로 이상 징후를 파악하는 것이고, FDC는 엔진 센서 데이터를 실시간 모니터링하여 고장을 예방하는 것.",
+      "spc": {
+        "name": "SPC (Statistical Process Control)",
+        "fullName": "통계적 공정 관리",
+        "description": "공정 결과(계측 데이터)를 통계적으로 분석하여 관리 한계를 설정하고 이상을 감지",
+        "keyComponents": [
+          { "name": "관리도 (Control Chart)", "description": "UCL/LCL 기준으로 공정 변동 모니터링" },
+          { "name": "공정 능력 지수 (Cpk)", "description": "규격 대비 공정 산포 → 1.33 이상이 일반적 목표" },
+          { "name": "런 규칙 (Run Rules)", "description": "연속 편향, 트렌드 등 비정상 패턴 감지" }
+        ]
+      },
+      "fdc": {
+        "name": "FDC (Fault Detection and Classification)",
+        "fullName": "설비 이상 감지 및 분류",
+        "description": "설비 센서 데이터를 실시간 수집·분석하여 이상 감지 및 원인 분류",
+        "dataTypes": [
+          "온도, 압력, 가스 유량",
+          "RF 파워, 임피던스",
+          "웨이퍼 위치, 척 온도",
+          "엔드포인트 신호"
+        ],
+        "process": "센서 데이터 수집 → 정상 패턴 학습 → 실시간 비교 → 이상 시 알람"
+      },
+      "fourDataTypes": [
+        {
+          "name": "계측 데이터 (Metrology)",
+          "description": "공정 결과 직접 측정 — CD, 두께, 결함 수",
+          "examples": ["CD-SEM 측정값", "막 두께 (Ellipsometry)", "결함 검사 (Defect Review)"],
+          "usage": "SPC 관리, 수율 예측"
+        },
+        {
+          "name": "설비 데이터 (FDC/EES)",
+          "description": "장비 센서에서 실시간 수집되는 데이터",
+          "examples": ["온도/압력 프로파일", "가스 유량 변화", "RF 매칭 상태"],
+          "usage": "설비 이상 감지, 예방 정비"
+        },
+        {
+          "name": "소자 데이터 (Device)",
+          "description": "전기적 테스트로 얻는 소자 특성",
+          "examples": ["Vth (문턱전압)", "Ion/Ioff (전류 특성)", "Breakdown Voltage"],
+          "usage": "소자 성능 평가, WAT(Wafer Acceptance Test)"
+        },
+        {
+          "name": "수율 데이터 (Yield)",
+          "description": "최종 불량률 및 수율 관련 데이터",
+          "examples": ["Wafer Yield", "Die Yield", "Bin 분류 결과"],
+          "usage": "공정 최적화, 불량 원인 분석"
+        }
+      ],
+      "aiExpansion": {
+        "description": "기존 품질 지표 20~30개 → AI로 수백 개 확장 니즈 (현업 이슈)",
+        "approach": "머신러닝으로 설비 데이터와 수율 간 상관관계 자동 발견",
+        "benefit": "사람이 놓치는 미세한 공정 변동 조기 감지"
+      },
+      "interviewPoints": [
+        "★ SPC와 FDC의 차이를 명확히: SPC는 결과(계측) 기반, FDC는 원인(설비) 기반",
+        "★ 4가지 데이터 종류를 나열하고 각각의 역할 설명",
+        "★ Cpk가 무엇이고 왜 1.33 이상을 목표로 하는지",
+        "★ AI/ML을 SPC/FDC에 적용하는 트렌드 — Virtual Metrology, Predictive Maintenance",
+        "★ 실제 FAB에서 이상 발생 시 대응 프로세스: 알람 → Hold → 원인 분석 → 조치 → 재개"
+      ]
+    }
+  ]
+}

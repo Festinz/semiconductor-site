@@ -1,0 +1,188 @@
+{
+  "updatedAt": "2026-03-28",
+  "categories": [
+    { "key": "pinSpeed", "label": "핀속도", "unit": "Gbps" },
+    { "key": "bandwidth", "label": "대역폭", "unit": "TB/s" },
+    { "key": "capacity", "label": "용량", "unit": "GB" },
+    { "key": "capacityGb", "label": "용량 (die)", "unit": "Gb" },
+    { "key": "powerEfficiency", "label": "전력효율", "unit": "% 절감" },
+    { "key": "latency", "label": "지연시간", "unit": "ns" },
+    { "key": "busWidth", "label": "메모리 버스 폭", "unit": "bit" },
+    { "key": "interposer", "label": "인터포저 연결 구조", "unit": "" },
+    { "key": "capacityPerStack", "label": "스택당 용량", "unit": "GB" },
+    { "key": "jedecTarget", "label": "JEDEC 목표", "unit": "Gbps" },
+    { "key": "actualAchieved", "label": "실제 달성", "unit": "Gbps" },
+    { "key": "processNode", "label": "공정 노드", "unit": "nm" }
+  ],
+  "categoryByProduct": {
+    "DDR5": ["capacity", "latency", "bandwidth", "pinSpeed"],
+    "GDDR7": ["pinSpeed", "busWidth", "bandwidth", "capacity"],
+    "HBM4": ["bandwidth", "powerEfficiency", "interposer", "capacityPerStack"],
+    "LPDDR6": ["pinSpeed", "bandwidth", "capacity", "powerEfficiency"],
+    "NAND": ["capacity", "bandwidth", "powerEfficiency", "processNode"]
+  },
+  "HBM4": {
+    "samsung": {
+      "pinSpeed": "11.7",
+      "pinSpeedMax": "13",
+      "bandwidth": "1.5",
+      "capacity": "36",
+      "powerEfficiency": null,
+      "jedecTarget": "8",
+      "actualAchieved": "11.7",
+      "processNode": "4",
+      "stack": "12-Hi",
+      "baseDie": "자체 4nm",
+      "status": "양산 출하 중",
+      "differentiator": "DTCO + IDM 통합",
+      "capacityUnit": "GB",
+      "capacityGb": "24",
+      "capacityGbNote": "24Gb(3GB)/die, 36GB(12-Hi stack)",
+      "interposer": "X-Cube + HCB",
+      "capacityPerStack": "36",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "hynix": {
+      "pinSpeed": "11.7",
+      "pinSpeedMax": null,
+      "bandwidth": "1.5",
+      "capacity": "36",
+      "powerEfficiency": null,
+      "jedecTarget": "8",
+      "actualAchieved": "11.7",
+      "processNode": null,
+      "stack": "12-Hi",
+      "baseDie": "TSMC 위탁",
+      "status": "최종 샘플",
+      "yield": "80",
+      "marketShare": "70",
+      "differentiator": "MR-MUF",
+      "price12Hi36GB": "500",
+      "capacityUnit": "GB",
+      "capacityGb": "24",
+      "capacityGbNote": "24Gb(3GB)/die, 36GB(12-Hi stack)",
+      "interposer": "Si interposer (TSMC CoWoS)",
+      "capacityPerStack": "36",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "jedec": {
+      "pinSpeed": "8"
+    }
+  },
+  "DDR5": {
+    "samsung": {
+      "pinSpeed": "8.4",
+      "bandwidth": null,
+      "capacity": null,
+      "powerEfficiency": null,
+      "jedecTarget": "6.4",
+      "actualAchieved": "8.4",
+      "processNode": null,
+      "coreTech": "High-K Metal Gate",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "hynix": {
+      "pinSpeed": "9.0",
+      "pinSpeedMin": "8.4",
+      "bandwidth": null,
+      "capacity": null,
+      "powerEfficiency": null,
+      "jedecTarget": "6.4",
+      "actualAchieved": "9.0",
+      "processNode": null,
+      "coreTech": "DVFS",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "jedec": {
+      "pinSpeed": "6.4"
+    }
+  },
+  "GDDR7": {
+    "samsung": {
+      "pinSpeed": "32",
+      "bandwidth": null,
+      "capacity": "36",
+      "powerEfficiency": null,
+      "jedecTarget": null,
+      "actualAchieved": "32",
+      "processNode": null,
+      "capacityUnit": "GB",
+      "capacityGb": "24",
+      "capacityGbNote": "24Gb per die",
+      "busWidth": "256",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "hynix": {
+      "pinSpeed": "32",
+      "bandwidth": null,
+      "capacity": "48",
+      "capacityNote": "세계 최초, +33%",
+      "powerEfficiency": null,
+      "jedecTarget": null,
+      "actualAchieved": "32",
+      "processNode": null,
+      "capacityUnit": "GB",
+      "capacityGb": "24",
+      "capacityGbNote": "24Gb per die, 12나노급",
+      "busWidth": "256",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "jedec": {
+      "capacity": "36"
+    }
+  },
+  "LPDDR6": {
+    "samsung": {
+      "pinSpeed": "10.7",
+      "bandwidth": "68.3",
+      "capacity": "32",
+      "powerEfficiency": null,
+      "jedecTarget": "10.7",
+      "actualAchieved": "10.7",
+      "processNode": "1c 10nm",
+      "dvfs": false,
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "hynix": {
+      "pinSpeed": "10.7",
+      "bandwidth": "68.3",
+      "capacity": "32",
+      "powerEfficiency": "20",
+      "speedIncrease": "33",
+      "jedecTarget": "10.7",
+      "actualAchieved": "10.7",
+      "processNode": "1c 10nm",
+      "dvfs": true,
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "jedec": {
+      "pinSpeed": "10.7"
+    }
+  },
+  "NAND": {
+    "samsung": {
+      "pinSpeed": null,
+      "bandwidth": "14.5",
+      "capacity": "2000",
+      "powerEfficiency": "30",
+      "jedecTarget": null,
+      "actualAchieved": null,
+      "processNode": "V9 (9세대)",
+      "keyProduct": "PM9E1",
+      "layers": "290+",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "hynix": {
+      "pinSpeed": null,
+      "bandwidth": "14.0",
+      "capacity": "2000",
+      "powerEfficiency": "25",
+      "jedecTarget": null,
+      "actualAchieved": null,
+      "processNode": "V8 (8세대)",
+      "layers": "238",
+      "lastUpdated": "2026-03-28T00:00:00.000Z"
+    },
+    "jedec": {}
+  }
+}

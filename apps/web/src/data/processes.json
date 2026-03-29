@@ -1,0 +1,370 @@
+{
+  "updatedAt": "2026-03-28",
+  "processes": [
+    {
+      "id": "photo",
+      "name": "포토리소그래피",
+      "nameEn": "Photolithography",
+      "slug": "photo",
+      "order": 1,
+      "analogy": {
+        "title": "스텐실 + 스프레이 페인트",
+        "description": "종이에 스텐실을 대고 스프레이를 뿌리면 원하는 모양만 남는 것처럼, 마스크(스텐실)를 통해 빛(스프레이)을 쏘면 웨이퍼 위에 원하는 회로 패턴이 그려집니다.",
+        "everyday": "프린터가 종이에 글자를 인쇄하듯, 웨이퍼에 나노미터 크기의 회로를 '인쇄'하는 공정"
+      },
+      "description": "빛(UV/EUV)을 이용해 마스크의 회로 패턴을 웨이퍼 위의 감광제(PR)에 전사하는 공정. 반도체 미세화의 핵심이며, 전체 공정의 약 40%를 차지합니다.",
+      "keyMaterials": [
+        {
+          "name": "PR (Photoresist / 감광제)",
+          "composition": "Polymer + PAC(감광성분) + Solvent(용매)",
+          "types": [
+            { "name": "Positive PR", "behavior": "빛 받은 부분이 녹음 (현재 주류)" },
+            { "name": "Negative PR", "behavior": "빛 받은 부분이 남음" }
+          ]
+        },
+        {
+          "name": "Hard Mask",
+          "description": "PR만으로 패턴 유지가 어려울 때 사용하는 추가 보호막 (SiN, SiO₂ 등)"
+        }
+      ],
+      "keyParameters": [
+        { "name": "해상도 (Resolution)", "description": "만들 수 있는 최소 패턴 크기", "unit": "nm" },
+        { "name": "오버레이 (Overlay)", "description": "층간 정렬 정확도", "unit": "nm" },
+        { "name": "CD (Critical Dimension)", "description": "실제 형성된 패턴의 폭", "unit": "nm" },
+        { "name": "DoF (Depth of Focus)", "description": "초점이 맞는 깊이 범위", "unit": "nm" }
+      ],
+      "lightSources": [
+        { "name": "KrF", "wavelength": "248nm", "era": "180nm~" },
+        { "name": "ArF", "wavelength": "193nm", "era": "90nm~" },
+        { "name": "ArF immersion", "wavelength": "193nm (물 렌즈)", "era": "45nm~" },
+        { "name": "EUV", "wavelength": "13.5nm", "era": "7nm~" },
+        { "name": "High-NA EUV", "wavelength": "13.5nm (NA 0.55)", "era": "2nm~" }
+      ],
+      "interviewPoints": [
+        "★ PR의 3가지 구성요소(Polymer, PAC, Solvent)를 반드시 외울 것",
+        "★ Positive vs Negative PR 차이를 명확히 — 현재 공정에서 Positive가 주류인 이유(미세 패턴에 유리)",
+        "★ EUV vs ArF immersion의 장단점 비교 — EUV는 Single patterning 가능하지만 광원 출력/마스크 비용 이슈",
+        "★ Hard Mask가 왜 필요한지 — 고종횡비 식각에서 PR만으로는 패턴 유지 불가",
+        "★ Overlay 관리가 왜 중요한지 — 다층 구조에서 층간 정렬 오차가 소자 성능 직결"
+      ]
+    },
+    {
+      "id": "etch",
+      "name": "식각",
+      "nameEn": "Etching",
+      "slug": "etch",
+      "order": 2,
+      "analogy": {
+        "title": "조각가의 끌",
+        "description": "조각가가 대리석에서 불필요한 부분을 깎아내 작품을 만들듯, 식각은 웨이퍼에서 불필요한 부분을 제거해 회로 패턴을 완성합니다.",
+        "everyday": "쿠키 반죽에서 쿠키 틀로 모양을 찍어내는 것처럼, 포토로 그린 패턴대로 불필요한 막을 제거"
+      },
+      "description": "포토 공정에서 정의된 패턴을 따라 불필요한 박막을 선택적으로 제거하는 공정. 습식(Wet)과 건식(Dry) 방식이 있으며, 현대 반도체는 건식 식각이 주류입니다.",
+      "types": [
+        {
+          "name": "Wet Etch (습식 식각)",
+          "description": "화학 용액에 담가 제거",
+          "pros": "선택비 우수, 대량 처리 가능",
+          "cons": "등방성 — 옆으로도 파이므로 미세 패턴 불리",
+          "useCase": "세정, 희생막 제거"
+        },
+        {
+          "name": "Dry Etch (건식 식각)",
+          "description": "플라즈마/가스로 제거",
+          "pros": "비등방성 — 수직 식각 가능, 미세 패턴에 유리",
+          "cons": "장비 비용 높음, 플라즈마 데미지 가능",
+          "useCase": "게이트, 콘택 식각 등 핵심 공정"
+        },
+        {
+          "name": "RIE (Reactive Ion Etching)",
+          "description": "반응성 이온을 이용한 건식 식각의 대표적 방법. 플라즈마에서 생성된 반응성 이온이 전기장에 의해 수직 방향으로 가속되어 웨이퍼 표면에 충돌하면서 화학반응과 물리적 스퍼터링을 동시에 수행한다.",
+          "pros": "화학반응 + 물리적 충돌 결합 → 높은 선택비와 방향성 동시 확보",
+          "cons": "플라즈마 데미지(Charging damage), 마이크로 로딩 효과",
+          "useCase": "대부분의 미세 패턴 식각",
+          "mechanism": {
+            "chemical": "반응 가스(F, Cl 라디칼)가 표면과 화학반응 → 선택적 제거 (선택비 확보)",
+            "physical": "이온이 수직 방향으로 가속·충돌 → 방향성(Anisotropy) 확보",
+            "synergy": "화학반응이 표면을 약화시키고, 물리적 충돌이 반응 생성물을 제거 → 수직 프로파일"
+          },
+          "variants": [
+            { "name": "MERIE (Magnetically Enhanced RIE)", "description": "자기장으로 플라즈마 밀도 향상" },
+            { "name": "ICP-RIE (Inductively Coupled Plasma)", "description": "고밀도 플라즈마, 독립적 이온 에너지 제어" },
+            { "name": "DRIE (Deep RIE / Bosch Process)", "description": "깊은 식각용, 식각/보호 교대 반복" }
+          ]
+        }
+      ],
+      "keyParameters": [
+        { "name": "선택비 (Selectivity)", "description": "원하는 막 vs 보호막의 식각 속도 비율. 높을수록 좋음", "unit": "비율" },
+        { "name": "식각 속도 (Etch Rate)", "description": "단위 시간당 제거되는 막의 두께", "unit": "nm/min" },
+        { "name": "균일도 (Uniformity)", "description": "웨이퍼 전체에 걸친 식각 균일성", "unit": "%" },
+        { "name": "프로파일 (Profile)", "description": "식각 단면의 형상 — 수직이 이상적", "unit": "각도" }
+      ],
+      "etchGasTable": [
+        { "targetMaterial": "Si", "gas": "Cl₂, HBr, SF₆", "note": "HBr는 높은 선택비" },
+        { "targetMaterial": "SiO₂", "gas": "CF₄, C₄F₈, CHF₃", "note": "불소계 가스 사용" },
+        { "targetMaterial": "SiN", "gas": "CF₄/O₂, CHF₃", "note": "SiO₂ 대비 선택비 확보 중요" },
+        { "targetMaterial": "Poly-Si", "gas": "Cl₂/HBr", "note": "게이트 식각의 핵심" },
+        { "targetMaterial": "Metal (W, Al)", "gas": "Cl₂/BCl₃, SF₆", "note": "금속 배선 패터닝" }
+      ],
+      "applications": [
+        {
+          "name": "STI (Shallow Trench Isolation)",
+          "description": "소자 간 격리를 위해 실리콘에 얕은 트렌치를 식각하고 산화막으로 채움",
+          "steps": ["패드 산화막/질화막 형성", "포토+식각으로 트렌치 형성", "라이너 산화", "HDP-CVD로 SiO₂ 충전", "CMP로 평탄화"],
+          "keyChallenge": "트렌치 측벽 각도 제어, 코너 라운딩(Corner Rounding)으로 전계 집중 방지"
+        },
+        {
+          "name": "HAR (High Aspect Ratio) 식각",
+          "description": "3D NAND 등에서 종횡비 50:1 이상의 깊은 홀/트렌치 식각",
+          "challenges": ["Bowing (측벽 볼록)", "Twisting (홀 위치 틀어짐)", "Not-open (바닥 미관통)", "Mask erosion"]
+        }
+      ],
+      "futureTech": {
+        "name": "극저온 식각 (Cryogenic Etching)",
+        "description": "극저온(-100℃ 이하) 환경에서 식각하여 측벽 보호막 자연 형성",
+        "benefits": ["속도 3배 향상", "공정 가스 90% 절감", "친환경"],
+        "company": "SK하이닉스 주도 개발"
+      },
+      "interviewPoints": [
+        "★ Wet vs Dry 식각의 핵심 차이: 등방성 vs 비등방성 — 그림 그려서 설명할 수 있어야 함",
+        "★ 선택비(Selectivity)가 왜 중요한지 — 원하는 층만 정확히 제거, 하부 구조 보호",
+        "★ RIE에서 화학반응과 물리적 충돌이 각각 어떤 역할인지 설명",
+        "★ 극저온 식각의 원리와 장점 — 최신 트렌드로 면접에서 가산점",
+        "★ 고종횡비(HAR) 식각 시 어려운 점: Bowing, Twisting, Not-open 현상"
+      ]
+    },
+    {
+      "id": "diffusion",
+      "name": "확산/이온주입",
+      "nameEn": "Diffusion / Ion Implantation",
+      "slug": "diffusion",
+      "order": 3,
+      "analogy": {
+        "title": "각설탕 녹이기 + 정밀 주사기",
+        "description": "확산은 커피에 각설탕을 넣으면 자연히 퍼지는 것이고, 이온주입은 주사기로 원하는 위치에 정확히 약을 주입하는 것입니다.",
+        "everyday": "순수한 실리콘에 불순물을 넣어 전기가 통하게 만드는 공정 — 반도체의 '맛'을 결정하는 양념"
+      },
+      "description": "반도체 소자의 전기적 특성을 결정하기 위해 불순물(도펀트)을 실리콘에 주입하는 공정. 현대 공정에서는 이온주입(Ion Implantation) + 열처리(Annealing) 조합이 표준입니다.",
+      "methods": [
+        {
+          "name": "확산 (Diffusion)",
+          "description": "고온에서 불순물이 자연히 퍼져 들어감",
+          "pros": "공정 단순",
+          "cons": "정밀 제어 어려움, 등방성 확산",
+          "era": "과거 주력"
+        },
+        {
+          "name": "이온주입 (Ion Implantation)",
+          "description": "불순물 원자를 이온화하여 전기장으로 가속, 웨이퍼에 충돌시켜 주입",
+          "pros": "깊이/농도 정밀 제어, 비등방성 — 정확한 위치에 도핑 가능",
+          "cons": "결정 격자 손상 → 어닐링 필수 (이온이 격자 사이에 위치하는 문제 해결)",
+          "era": "현재 주력",
+          "whyReplaced": "확산(Diffusion)은 등방성이라 사방으로 퍼져 정확한 도핑 프로파일 불가 → 이온주입은 비등방성이라 원하는 깊이/위치에 정밀 주입 가능",
+          "equipment": {
+            "components": ["이온원(Ion Source)", "질량분석기(Mass Analyzer)", "가속관(Accelerator)", "편향계(Deflector)", "엔드스테이션(End Station)"],
+            "principle": "도펀트 가스 → 이온화 → 질량 분석으로 원하는 이온만 선별 → 가속 → 웨이퍼에 주입"
+          }
+        }
+      ],
+      "annealingProcess": {
+        "name": "어닐링 (Annealing)",
+        "purpose": "이온주입 시 발생한 결정 격자 손상 복구 + 불순물 활성화",
+        "types": [
+          { "name": "RTA (Rapid Thermal Annealing)", "temp": "900~1100℃", "time": "수초~수십초" },
+          { "name": "Flash Annealing", "temp": "~1300℃", "time": "밀리초" },
+          { "name": "Laser Annealing", "temp": "표면만 용융", "time": "나노초" }
+        ]
+      },
+      "oxidation": {
+        "description": "실리콘 표면에 SiO₂ 절연막을 형성하는 열산화 공정",
+        "types": [
+          { "name": "Dry Oxidation", "gas": "O₂", "rate": "느림", "quality": "치밀, 고품질", "useCase": "게이트 산화막" },
+          { "name": "Wet Oxidation", "gas": "H₂O (수증기)", "rate": "빠름", "quality": "다공성, 품질 낮음", "useCase": "필드 산화막, 두꺼운 산화막" }
+        ],
+        "dealGroveModel": "산화막 성장 모델: 얇은 막은 선형(Linear) 성장, 두꺼운 막은 포물선(Parabolic) 성장"
+      },
+      "dopants": [
+        { "type": "n-type", "elements": ["P (인)", "As (비소)"], "carriers": "전자" },
+        { "type": "p-type", "elements": ["B (붕소)"], "carriers": "정공" }
+      ],
+      "keyParameters": [
+        { "name": "도즈 (Dose)", "description": "단위 면적당 주입된 이온 수", "unit": "ions/cm²" },
+        { "name": "에너지 (Energy)", "description": "이온의 가속 에너지 → 주입 깊이 결정", "unit": "keV" },
+        { "name": "접합 깊이 (Junction Depth)", "description": "불순물이 도달하는 깊이", "unit": "nm" },
+        { "name": "시트 저항 (Sheet Resistance)", "description": "주입 후 도핑층의 전기 저항", "unit": "Ω/sq" }
+      ],
+      "interviewPoints": [
+        "★ 이온주입 후 어닐링이 반드시 필요한 이유 — 격자 손상 복구 + 도펀트 활성화",
+        "★ n-type(전자) vs p-type(정공) 도핑의 차이와 사용 원소",
+        "★ Dose와 Energy가 각각 무엇을 제어하는지: 농도 vs 깊이",
+        "★ RTA vs Flash vs Laser 어닐링의 트레이드오프",
+        "★ 확산과 이온주입의 비교 — 왜 현대 공정에서 이온주입이 주력인지"
+      ]
+    },
+    {
+      "id": "thin-film",
+      "name": "박막 증착",
+      "nameEn": "Thin Film Deposition",
+      "slug": "thin-film",
+      "order": 4,
+      "analogy": {
+        "title": "페인트칠의 3가지 방법",
+        "description": "PVD는 스프레이건(물리적 분사), CVD는 자동차 도색 부스(화학 반응으로 코팅), ALD는 한 번에 딱 한 겹씩 바르는 매니큐어입니다.",
+        "everyday": "웨이퍼 표면에 나노미터 두께의 막을 균일하게 입히는 공정"
+      },
+      "description": "웨이퍼 위에 전도체, 절연체, 반도체 등 다양한 재료의 얇은 막을 형성하는 공정. 방법에 따라 PVD, CVD, ALD로 나뉘며, 각각 장단점이 다릅니다.",
+      "methods": [
+        {
+          "name": "PVD (Physical Vapor Deposition)",
+          "subtype": "Sputtering",
+          "description": "타겟 물질에 이온을 충돌시켜 떨어진 원자가 웨이퍼에 증착",
+          "pros": "고순도, 빠른 증착",
+          "cons": "단차 피복성(Step Coverage) 나쁨 — 위에만 잘 쌓임",
+          "useCase": "금속 배선 (Al, Cu, Ti, TiN)"
+        },
+        {
+          "name": "CVD (Chemical Vapor Deposition)",
+          "description": "반응 가스를 챔버에 공급, 화학 반응으로 막 형성",
+          "pros": "우수한 단차 피복성, 다양한 막질 가능",
+          "cons": "부산물 관리 필요, 고온 공정",
+          "subTypes": [
+            { "name": "LPCVD", "description": "저압 CVD — 균일성 우수" },
+            { "name": "PECVD", "description": "플라즈마 보조 — 저온 가능" },
+            { "name": "MOCVD", "description": "유기금속 CVD — 화합물 반도체" }
+          ],
+          "useCase": "SiO₂, SiN, Poly-Si"
+        },
+        {
+          "name": "ALD (Atomic Layer Deposition)",
+          "description": "전구체를 번갈아 공급하여 원자 한 층씩 증착 (Self-limitation 원리)",
+          "pros": "원자 단위 두께 제어, 완벽한 단차 피복성, 극미세 구조에 이상적",
+          "cons": "느린 증착 속도",
+          "selfLimitation": "전구체가 표면에 1층만 흡착 → Purge → 반응물 공급 → 1층 형성 → 반복",
+          "useCase": "High-K 유전체 (HfO₂), GAA 게이트 산화막, 3D NAND",
+          "aldWindow": {
+            "description": "ALD가 정상적으로 self-limitation 동작하는 온도 범위",
+            "tooLow": "전구체 응축(Condensation) 또는 불완전 반응",
+            "tooHigh": "전구체 분해(Decomposition) → CVD 모드 전환",
+            "optimal": "물질마다 다름 — HfO₂: 200~300℃, Al₂O₃: 150~350℃"
+          }
+        },
+        {
+          "name": "ECP (Electrochemical Plating / 전해도금)",
+          "description": "전기화학적 방법으로 Cu를 증착하는 기술. Damascene 공정에서 Cu 배선 형성의 핵심",
+          "pros": "빠른 Cu 충전, 우수한 갭 필(Gap-fill)",
+          "cons": "시드층(Seed layer) 필요, 후처리(CMP) 필수",
+          "useCase": "Cu 배선 (Damascene 공정)",
+          "damasceneProcess": {
+            "steps": ["유전체에 트렌치/비아 식각", "Barrier(TaN/Ta) + Seed(Cu) PVD 증착", "ECP로 Cu 충전", "CMP로 여분의 Cu 제거"],
+            "types": [
+              { "name": "Single Damascene", "description": "비아와 배선을 각각 형성" },
+              { "name": "Dual Damascene", "description": "비아와 배선을 동시에 형성 — 공정 단축" }
+            ]
+          }
+        },
+        {
+          "name": "Silicide (실리사이드)",
+          "description": "금속과 실리콘의 합금(예: NiSi, CoSi₂, TiSi₂)을 형성하여 접촉 저항을 낮추는 공정",
+          "pros": "소스/드레인/게이트 접촉 저항 대폭 감소",
+          "cons": "Agglomeration(응집) 방지 위해 공정 온도 제어 중요",
+          "useCase": "MOSFET 소스/드레인/게이트 접촉부",
+          "salicideProcess": "Self-Aligned Silicide — 별도 마스크 없이 노출된 Si 위에만 선택적 형성"
+        }
+      ],
+      "beol": {
+        "name": "BEOL (Back End of Line)",
+        "description": "소자 형성 후 금속 배선으로 소자들을 연결하는 공정 단계",
+        "layers": "10~15층의 다층 금속 배선 (하부: 미세배선, 상부: 전원/신호)",
+        "materials": {
+          "conductor": "Cu (Dual Damascene)",
+          "dielectric": "Low-K (SiCOH, k < 3.0) — RC delay 감소",
+          "barrier": "TaN/Ta — Cu 확산 방지"
+        },
+        "challenge": "RC delay 감소가 핵심 — 저유전율(Low-K) 물질 + Cu 배선 조합"
+      },
+      "stepCoverage": {
+        "comparison": [
+          { "method": "PVD", "coverage": "10~30%", "reason": "직진성 증착, 측벽에 도달 어려움" },
+          { "method": "CVD", "coverage": "50~80%", "reason": "화학반응 기반, 표면 도달성 우수" },
+          { "method": "ALD", "coverage": "~100%", "reason": "자기 제한 반응, 모든 표면에 균일 증착" }
+        ],
+        "importance": "3D 구조(FinFET, GAA, 3D NAND)에서 측벽/바닥까지 균일한 막 형성 필수"
+      },
+      "keyParameters": [
+        { "name": "증착 속도 (Deposition Rate)", "description": "단위 시간당 형성되는 막 두께", "unit": "nm/min (Å/cycle for ALD)" },
+        { "name": "단차 피복성 (Step Coverage)", "description": "3D 구조의 측벽/바닥까지 균일하게 증착되는 정도", "unit": "%" },
+        { "name": "막질 (Film Quality)", "description": "밀도, 순도, 응력 등 종합적 품질", "unit": "-" },
+        { "name": "균일도 (Uniformity)", "description": "웨이퍼 전면에 걸친 두께 균일성", "unit": "%" }
+      ],
+      "interviewPoints": [
+        "★ PVD vs CVD vs ALD를 한 문장씩 비교할 수 있어야 함 — 물리 vs 화학 vs 원자층",
+        "★ ALD의 Self-limitation 원리를 정확히 설명 — 왜 한 층만 형성되는지",
+        "★ Step Coverage가 왜 중요한지 — 3D 구조(FinFET, GAA, 3D NAND)에서 필수",
+        "★ ALD가 High-K Metal Gate에 쓰이는 이유: HfO₂를 원자 단위로 제어해야 하므로",
+        "★ PVD의 Sputtering 원리 — 타겟, Ar이온, 스퍼터링 수율 개념"
+      ]
+    },
+    {
+      "id": "cmp",
+      "name": "화학적 기계적 연마",
+      "nameEn": "Chemical Mechanical Polishing (CMP)",
+      "slug": "cmp",
+      "order": 5,
+      "analogy": {
+        "title": "손톱 광내기",
+        "description": "네일 파일로 울퉁불퉁한 표면을 갈고, 버퍼로 광을 내듯, 화학약품(슬러리)으로 녹이면서 물리적으로 깎아 웨이퍼를 거울처럼 평탄하게 만듭니다.",
+        "everyday": "울퉁불퉁한 도로를 아스팔트로 다시 포장하는 것처럼, 여러 층을 쌓은 웨이퍼 표면을 평탄화"
+      },
+      "description": "화학적 반응(슬러리)과 기계적 연마(패드)를 동시에 적용하여 웨이퍼 표면을 원자 수준으로 평탄화하는 공정. 다층 배선 구조에서 각 층 사이의 평탄화에 필수적입니다.",
+      "mechanism": {
+        "chemical": "슬러리(Slurry)의 화학성분이 표면을 연화/용해",
+        "mechanical": "연마 패드가 물리적으로 표면을 깎아냄",
+        "synergy": "화학+기계 동시 작용으로 높은 곳만 선택적으로 제거 → 평탄화"
+      },
+      "materials": [
+        { "name": "슬러리 (Slurry)", "description": "연마 입자(SiO₂, CeO₂, Al₂O₃) + 화학 용액 + 분산제" },
+        { "name": "연마 패드 (Pad)", "description": "폴리우레탄 재질, 마이크로 홈(groove)으로 슬러리 공급" },
+        { "name": "컨디셔너 (Conditioner)", "description": "다이아몬드 디스크로 패드 표면 재생" }
+      ],
+      "defects": [
+        {
+          "name": "디싱 (Dishing)",
+          "description": "넓은 금속 영역(Wide trench)의 중앙이 오목하게 파이는 현상",
+          "cause": "패드가 넓은 금속 영역에서 더 깊이 눌림 + 슬러리 화학반응 과다",
+          "solution": "슬러리 조성 최적화, Dummy pattern 삽입으로 패턴 밀도 균일화"
+        },
+        {
+          "name": "에로젼 (Erosion)",
+          "description": "미세 패턴이 밀집된 영역에서 절연막까지 과도하게 연마되는 현상",
+          "cause": "미세 패턴 영역의 높은 패턴 밀도 → 국부적 과연마",
+          "solution": "Endpoint detection, Multi-step CMP"
+        },
+        {
+          "name": "스크래치 (Scratch)",
+          "description": "슬러리 입자 응집이나 패드 결함으로 인한 표면 긁힘",
+          "cause": "슬러리 입자 크기 불균일, 패드 컨디셔닝 불량",
+          "solution": "슬러리 필터링, 패드 컨디셔너 관리, Post-CMP 세정"
+        }
+      ],
+      "postCMP": {
+        "name": "Post-CMP 세정",
+        "description": "연마 후 잔류 슬러리 입자 및 오염물 제거",
+        "method": "DI Water (초순수) + 브러시 세정 + 메가소닉"
+      },
+      "keyParameters": [
+        { "name": "제거율 (Removal Rate)", "description": "단위 시간당 제거되는 막 두께", "unit": "nm/min" },
+        { "name": "평탄도 (Planarity)", "description": "연마 후 표면의 평탄한 정도", "unit": "nm" },
+        { "name": "디싱 (Dishing)", "description": "넓은 금속 영역이 과도하게 파이는 현상", "unit": "nm" },
+        { "name": "스크래치 (Scratch)", "description": "연마 중 표면 결함 발생", "unit": "count/wafer" },
+        { "name": "균일도 (WIWNU)", "description": "Within Wafer Non-Uniformity", "unit": "%" }
+      ],
+      "interviewPoints": [
+        "★ CMP에서 '화학적'과 '기계적'이 각각 어떤 역할인지 분리해서 설명",
+        "★ 왜 평탄화가 필요한지 — 다층 배선에서 높이 차이 → 포토 공정 DoF 초과 → 패턴 불량",
+        "★ 디싱(Dishing)과 에로젼(Erosion) 현상 설명 — Cu CMP에서 특히 중요",
+        "★ Post-CMP 세정이 왜 중요한지: 잔류 입자가 다음 공정 오염원",
+        "★ 슬러리의 구성과 역할 — 연마 입자 크기/종류가 성능에 미치는 영향"
+      ]
+    }
+  ]
+}

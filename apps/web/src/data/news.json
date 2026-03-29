@@ -1,0 +1,168 @@
+[
+  {
+    "title": "삼성·AMD, AI 메모리 협력 확대",
+    "summary": "삼성전자와 AMD가 차세대 인공지능(AI) 메모리 솔루션 개발 협력을 확대합니다. 고성능 AI 칩에 필수적인 고대역폭 메모리(HBM) 등 혁신 기술 공동 발전을 목표로 합니다. 양사는 AI 시대 핵심 기술 주도권 확보에 시너지를 낼 것으로 기대됩니다.",
+    "category": "hbm",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-28",
+    "sourceUrl": "https://v.daum.net/v/20260322093925057",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성-AMD, 차세대 AI 협력",
+    "summary": "삼성전자와 AMD가 차세대 인공지능(AI) 메모리 및 컴퓨팅 기술 개발을 위해 손잡았습니다.\n양사는 평택사업장에서 협력을 확대하는 양해각서(MOU)를 체결하며, 주요 경영진이 참석했습니다.\n이번 협력은 AI 시대 핵심 기술인 고성능 메모리와 연산 기술 발전에 기여할 것으로 기대됩니다.",
+    "category": "hbm",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-28",
+    "sourceUrl": "https://news.samsungsemiconductor.com/kr/latest/",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성전자 GTC 2026 AI 반도체",
+    "summary": "삼성전자가 엔비디아 GTC 2026에서 차세대 AI 반도체(인공지능 처리용 칩) 기술 비전을 제시했습니다.\n주로 고대역폭 메모리(HBM)와 파운드리(반도체 위탁 생산) 솔루션 혁신에 초점을 맞췄을 것으로 예상됩니다.\n이를 통해 AI 시대의 반도체 시장 주도권을 강화하려는 전략을 드러냈습니다.",
+    "category": "hbm",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-22",
+    "sourceUrl": "https://v.daum.net/v/20260322093925057",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성, GTC 2026서 HBM4/HBM4E 공개",
+    "summary": "삼성전자가 엔비디아 GTC 2026에 참가하여\n업계 최초로 양산하는 HBM4(고대역폭 메모리 4세대)와 차세대 HBM4E 칩을 공개했습니다.\n이를 통해 인공지능(AI) 반도체의 미래 비전을 제시했습니다.",
+    "category": "hbm",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-22",
+    "sourceUrl": "https://news.samsungsemiconductor.com/kr/latest/",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성, GTC서 HBM4E 첫 공개",
+    "summary": "삼성전자가 GTC(GPU 기술 컨퍼런스)에서 차세대 고대역폭 메모리(HBM4E)를 세계 최초로 공개했습니다.\n이는 엔비디아와의 AI(인공지능) 반도체 동맹을 강화하고, 종합적인 솔루션(HBM, 파운드리, 패키징 등)으로 AI 시장을 선도하려는 전략입니다.\n이번 발표는 AI 시대 핵심 기술인 HBM 시장에서 삼성전자의 리더십을 공고히 하는 중요한 계기가 될 것입니다.",
+    "category": "hbm",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-28",
+    "sourceUrl": "https://v.daum.net/v/20260322093925057",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성, HBM4E 공개로 AI 리더십 강화",
+    "summary": "삼성전자가 GTC 2026에서 차세대 고대역폭 메모리(HBM)인 HBM4E 기술을 공개했습니다.\n엔비디아의 AI 플랫폼 '베라 루빈(Vera Rubin)'에 최적화된 메모리 토털 솔루션도 함께 선보였습니다.\n이를 통해 삼성전자는 엔비디아와의 협력을 강화하며 인공지능(AI) 반도체 시장에서의 리더십을 공고히 하려는 전략입니다.",
+    "category": "hbm",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-22",
+    "sourceUrl": "https://v.daum.net/v/20260322093925057",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성 3nm 수율 안정화, AMD 수주",
+    "summary": "삼성전자가 AMD와 인공지능(AI) 칩 기업 그록(Grok)으로부터 파운드리(반도체 위탁 생산) 주문을 수주했습니다.\n특히, 3나노미터(nm, 10억분의 1미터) 공정의 수율(전체 생산량 대비 양품 비율)이 50% 수준으로 안정화되었다는 분석입니다.\n이는 삼성의 차세대 반도체 제조 기술 경쟁력이 강화되고 있음을 시사합니다.",
+    "category": "foundry",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-28",
+    "sourceUrl": "https://www.youtube.com/watch?v=fWspqB0IZSE",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성 파운드리, 테슬라/메타 계약",
+    "summary": "삼성전자 파운드리(반도체 위탁 생산) 사업부가 테슬라의 대규모 인공지능(AI) 칩 생산 계약을 확보했습니다.\n이는 메타(페이스북 모회사)가 기존 TSMC 대신 삼성전자에 생산을 맡길 가능성을 시사하며, 시장의 큰 주목을 받고 있습니다.\n이번 계약은 삼성 파운드리의 기술력과 생산 능력을 입증하며, 업계 내 입지 강화에 기여할 전망입니다.",
+    "category": "foundry",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-22",
+    "sourceUrl": "https://v.daum.net/v/20260322093925057",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성 파운드리, 메타 이탈·테슬라·AMD 수주 논의",
+    "summary": "메타가 TSMC 대신 다른 파운드리(반도체 위탁 생산)를 찾으면서 삼성전자에 기회가 열렸습니다.\n삼성전자는 테슬라와 165억 달러(약 22조 원) 규모의 AI 칩 생산 계약을 확보했습니다.\n또한 AMD의 차세대 칩 생산을 위한 파운드리 협상도 활발히 진행 중입니다.",
+    "category": "foundry",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-28",
+    "sourceUrl": "https://www.youtube.com/watch?v=roaKwamWz34",
+    "metricsUpdates": []
+  },
+  {
+    "title": "삼성 메모리 공급난·HBM 증산",
+    "summary": "삼성전자가 2026년 3월 기준으로 메모리 반도체(데이터 저장 및 처리 칩) 공급 부족을 겪고 있습니다.\n특히 인공지능(AI) 시대 핵심인 고대역폭 메모리(HBM)의 수요가 급증하여 생산량 확대가 시급합니다.\n이에 삼성전자는 HBM 생산 능력을 대폭 늘려 시장 수요에 대응하고, 공급 부족 문제를 해결할 전망입니다.",
+    "category": "memory",
+    "importance": "major",
+    "company": "samsung",
+    "date": "2026-03-22",
+    "sourceUrl": "https://v.daum.net/v/20260322093925057",
+    "metricsUpdates": []
+  },
+  {
+    "title": "SK하이닉스, HBM4 최종 샘플 엔비디아 납품",
+    "summary": "SK하이닉스가 차세대 고대역폭 메모리 HBM4 최종 샘플을 엔비디아에 납품했습니다. MR-MUF(Mass Reflow Molded Underfill) 기술과 TSMC 위탁 베이스다이를 적용하며, 수율 80%를 달성해 양산 준비를 완료했습니다.",
+    "category": "hbm",
+    "importance": "breaking",
+    "company": "hynix",
+    "date": "2026-03-28",
+    "sourceUrl": "",
+    "metricsUpdates": [
+      { "product": "HBM4", "company": "hynix", "field": "yield", "value": "80" }
+    ]
+  },
+  {
+    "title": "SK하이닉스, GDDR7 48GB 세계 최초 양산",
+    "summary": "SK하이닉스가 12나노급 24Gb GDDR7 DRAM을 세계 최초로 양산합니다. 듀얼 4-chip 연결로 48GB(세계 최초, +33%) 용량을 달성하며, PAM3 신호 방식으로 40Gbps 속도를 확보했습니다. 고성능 GPU 및 AI 가속기 시장 공략에 나섭니다.",
+    "category": "memory",
+    "importance": "breaking",
+    "company": "hynix",
+    "date": "2026-03-27",
+    "sourceUrl": "",
+    "metricsUpdates": [
+      { "product": "GDDR7", "company": "hynix", "field": "capacity", "value": "48" }
+    ]
+  },
+  {
+    "title": "SK하이닉스, High-NA EUV 장비 도입 검토",
+    "summary": "SK하이닉스가 ASML의 High-NA EUV 장비 '트윈스캔 EXE:5200B' 도입을 검토 중입니다. 기존 EUV(NA 0.33) 대비 1.7배 정밀한 회로 형성과 2.9배 높은 집적도 구현이 가능하며, 차세대 DRAM 미세화에 필수적인 기술입니다.",
+    "category": "process",
+    "importance": "major",
+    "company": "hynix",
+    "date": "2026-03-26",
+    "sourceUrl": "",
+    "metricsUpdates": []
+  },
+  {
+    "title": "SK하이닉스 HBM 시장 점유율 70% 유지 (UBS 보고서)",
+    "summary": "UBS 보고서에 따르면 SK하이닉스가 HBM 시장에서 약 70%의 점유율을 유지하고 있습니다. HBM 매출도 전체 매출의 57%를 차지하며, 2013년 세계 최초 HBM 개발 이후 시장을 선도하고 있습니다.",
+    "category": "market",
+    "importance": "major",
+    "company": "hynix",
+    "date": "2026-03-25",
+    "sourceUrl": "",
+    "metricsUpdates": []
+  },
+  {
+    "title": "SK하이닉스 DDR5 9.0Gbps 업계 최고속 달성",
+    "summary": "SK하이닉스가 DDR5 DRAM에서 9.0Gbps 핀속도를 달성하며 업계 최고속 기록을 세웠습니다. DVFS(Dynamic Voltage Frequency Scaling) 기술을 적용해 전력 소모 20% 절감과 속도 33% 향상을 동시에 이뤄냈습니다.",
+    "category": "memory",
+    "importance": "major",
+    "company": "hynix",
+    "date": "2026-03-24",
+    "sourceUrl": "",
+    "metricsUpdates": [
+      { "product": "DDR5", "company": "hynix", "field": "pinSpeed", "value": "9.0" }
+    ]
+  },
+  {
+    "title": "SK하이닉스, 극저온 식각 기술 개발 성공",
+    "summary": "SK하이닉스가 -100℃ 이하 극저온 환경에서의 식각 기술 개발에 성공했습니다. 기존 대비 식각 속도 3배 향상, 공정 가스 90% 절감을 달성하며 친환경 반도체 공정 기술을 선도하고 있습니다.",
+    "category": "process",
+    "importance": "major",
+    "company": "hynix",
+    "date": "2026-03-23",
+    "sourceUrl": "",
+    "metricsUpdates": []
+  }
+]

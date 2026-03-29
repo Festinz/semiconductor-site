@@ -1,31 +1,10 @@
 {
-  "name": "semiconductor-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "semiconductor-tech-hub",
+  "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.33.0",
-  "dependencies": {
-    "@types/node": "^25.5.0",
-    "@types/react": "^19.2.14",
-    "framer-motion": "^12.38.0",
-    "next": "^14.2.35",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "typescript": "^6.0.2"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "autoprefixer": "^10.4.27",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19"
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "start": "pnpm --filter web start",
+    "lint": "pnpm --filter web lint"
   }
 }

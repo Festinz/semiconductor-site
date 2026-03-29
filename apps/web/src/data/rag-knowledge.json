@@ -1,0 +1,192 @@
+[
+  {
+    "id": "process-flow",
+    "process": "general",
+    "topic": "공정 Flow와 데이터 종류",
+    "title": "반도체 5대 공정 개요 및 데이터 4종류",
+    "content": "반도체 제조는 실리콘 웨이퍼 위에 여러 층을 쌓아 올려 회로를 형성하는 과정. 불필요한 부분을 깎고 필요한 부분을 덧 입히며 다양한 형태를 정밀하게 구현하는 복합적인 공정. 미세화될수록 공정 Step 증가하고 데이터 관리가 더욱 중요해짐. 대표 데이터 4종류: 1) 계측 데이터: CD(ADI/ACI), Defect Count, Overlay, 막 두께(Thickness) 2) 설비 데이터(FDC Parameter): 가스 유량, 온도, 압력, 파워 등 3) 소자 데이터: Vth, 전류(I), 커패시턴스(Cap), SS(Subthreshold Slope), DIBL 등 4) 수율 데이터: 최종 양품률. 공정 이상으로 수율이 떨어진다면: 1단계-설비별/Lot별 웨이퍼 데이터 Trend 분석(SPC 트렌드), 2단계-계측/FDC/소자/수율 Data 트랜드 및 Recipe 조건 검증.",
+    "keywords": ["공정 Flow", "데이터 4종류", "계측", "FDC", "소자", "수율", "SPC"],
+    "interviewPoints": ["공정 이상 시 원인 찾는 방법: 설비별→Lot별 Trend 분석 → 계측/FDC/소자/수율 종합 해석"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "photo-pr",
+    "process": "photo",
+    "topic": "PR (Photo Resist)",
+    "title": "포토레지스트 구성과 원리",
+    "content": "PR은 감광성 고분자 물질. 열/플라즈마에 약하기 때문에 하드마스크 사용. PR 3가지 주요 성분: 1) Polymer(수지, Resin) 95% - PR의 뼈대, 물리적 성질과 패턴 형성 능력에 직접 영향 2) Photoactive Compound(PAC) 10% 이하 - 빛에 반응하는 핵심 성분, UV에 의해 화학 반응 유도 3) Solvent - 점도 조절 및 균일한 도포. Positive PR: 빛을 받으면 PAC 분해 → 용해도 증가 → 노광 부분 제거. Negative PR: 빛을 받으면 중합 반응 → 용해도 감소 → 노광되지 않은 부분 제거.",
+    "keywords": ["PR", "Photoresist", "Polymer", "PAC", "Solvent", "Positive", "Negative"],
+    "interviewPoints": ["PR의 3가지 구성요소(Polymer, PAC, Solvent)를 반드시 외울 것", "PAC에 따라 PR이 Positive인지 Negative인지 나뉜다"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "photo-hardmask",
+    "process": "photo",
+    "topic": "Hard Mask",
+    "title": "하드마스크 공정",
+    "content": "하드마스크(Hard Mask)는 식각 시 감광액만으로는 마진 부족으로 하부층을 식각하기 어려워 사용하는 식각 선택비가 높은 물질. 재료: SiO₂(화학적 안정성, 절연성), Si₃N₄(식각 Selectivity 우수, 기계적 강도), ACL(Amorphous Carbon, High Aspect Ratio에 적합, 3D NAND/FinFET), TiN(전도성, 반사 방지층 겸용, Metal gate 공정). 하드마스크가 필요한 이유: 1) 식각 저항성 확보 2) 고종횡비 패턴 형성 3) PR 두께 제약 완화 4) 잔류물 최소화 및 균일도 향상 5) 선택비(Selectivity) 확보. 공정 순서: 하부막 Deposition → Hard Mask Deposition → PR 패터닝(노광/현상) → Hard Mask 식각 → 하부막 식각 → Hard Mask 제거(Strip).",
+    "keywords": ["Hard Mask", "SiO2", "Si3N4", "ACL", "TiN", "Selectivity", "HAR"],
+    "interviewPoints": ["하드마스크 공정은 PR이 더 이상 미세 패턴 기능을 수행할 수 없을 때, 특히 미세 패턴과 High Aspect Ratio 식각, 내식성과 내열성이 필요한 경우 사용하는 미세화 핵심 기술"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "photo-exposure",
+    "process": "photo",
+    "topic": "광원과 노광",
+    "title": "광원 세대와 노광 방식",
+    "content": "파장(λ)에 따라 해상도 한계가 달라짐. 광원 세대: g-line(436nm) → i-line(365nm) → KrF(248nm, 130~90nm) → ArF Dry(193nm, 90~65nm) → ArF Immersion(193nm, 45nm~7nm, 다중 패터닝) → EUV(13.5nm, 7nm 이하) → High NA EUV. High-NA EUV: 기존 EUV(NA 0.33) 대비 40% 향상된 광학 기술(NA 0.55)로 1.7배 더 정밀한 회로 형성 가능, 2.9배 높은 집적도. 장비: ASML 트윈스캔 EXE:5200B. 하이닉스는 2021년 10나노급 4세대(1anm) D램에 EUV를 첫 도입. Exposure Mode: Contact Aligner(해상도 우수, Defect 위험), Proximity Aligner(Defect 감소, 해상도 약간 떨어짐), Projection Aligner(축소 가능, 해상도 향상, 고비용).",
+    "keywords": ["EUV", "High-NA", "ArF", "KrF", "Immersion", "NA", "ASML", "Exposure"],
+    "interviewPoints": ["EUV vs ArF immersion의 장단점 비교", "High-NA EUV: NA 0.55, 1.7배 정밀, 2.9배 집적도"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "etch-wet-dry",
+    "process": "etch",
+    "topic": "Wet vs Dry Etch",
+    "title": "습식 vs 건식 식각 비교",
+    "content": "습식 식각(Wet Etch): 화학적 반응(액체). 등방성(Isotropic) — 모든 방향으로 동일하게 식각. 장점: 선택비 좋음, 식각속도 빠름, 저비용, 균일도 높음. 단점: 미세 패턴 불가, 표면 장력으로 침투 못함. 현재 세정(Cleaning) 위주로 활용. 건식 식각(Dry Etch): 물리적+화학적(플라즈마/가스). 비등방성(Anisotropic) — 수직 방향 정밀. 장점: 미세공정 필수, 방향성 제어 가능. 단점: 고비용, 식각속도 느림, 선택비 나쁨, 소자 물리적 손상 가능. 현 시점 속도보다 정확도를 우선시해서 Dry를 채택. 식각 물질과 공정 가스: Silicon Etch(Cl2, HBr → SiCl4), Oxide Etch(CF4, CHF3 → SiF4+CO2), Nitride Etch(CF4, CHF3), Metal Etch(Cl2, BCl3 → AlCl3).",
+    "keywords": ["Wet Etch", "Dry Etch", "등방성", "비등방성", "Selectivity", "플라즈마"],
+    "interviewPoints": ["Wet vs Dry 식각의 핵심 차이: 등방성 vs 비등방성 — 그림 그려서 설명할 수 있어야 함", "현 시점 속도보다 정확도를 우선시해서 Dry를 채택"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "etch-rie",
+    "process": "etch",
+    "topic": "RIE",
+    "title": "반응성 이온 식각 (RIE)",
+    "content": "RIE(Reactive Ion Etching): 플라즈마 상태의 활성 라디칼(화학적) + 이온 충돌 에너지(물리적)를 활용. 작동 원리: 1) 반응성 기체(XeF₂) + 비활성 기체(Ar) 주입 — XeF₂는 불안정해서 Xe와 F로 분리, F에 의한 화학반응으로 Si 식각 2) 챔버 고주파(RF) 에너지 인가 → 플라즈마 → 전자(−), 양이온(+), 라디칼(·) 생성 3) 전기장(바이어스)으로 양이온을 표면 방향으로 수직 가속 → 물리적 식각, 비등방성 방향 제어 4) 충돌로 결합이 약해진 표면에 라디칼이 반응하여 화학적 식각을 가속 → 선택비와 식각 속도 동시 확보. 결론: 비등방성(이온충돌, 물리적) + 높은 선택비(라디칼, 화학적) + 빠른 식각 동시 확보. 현대 고집적 반도체 식각은 대부분 RIE 기반. 단점: 진공 챔버 필요, 1장씩 처리라 생산성 떨어짐.",
+    "keywords": ["RIE", "Reactive Ion Etching", "플라즈마", "라디칼", "이온 충돌", "XeF2", "RF"],
+    "interviewPoints": ["RIE에서 화학반응과 물리적 충돌이 각각 어떤 역할인지 설명", "현대 반도체 식각은 대부분 RIE 기반"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "etch-parameters",
+    "process": "etch",
+    "topic": "식각 주요 요소",
+    "title": "균일도, 식각 속도, 선택비, Over Etch, EPD",
+    "content": "1. 균일도(Uniformity): 식각이 얼마나 고르게 진행됐는지. 회로 각 부분 식각 정도가 다르면 칩 동작 불가. 2. 식각 속도(Etch Rate): 단위 시간당 제거되는 막 두께. 플라즈마 원자와 이온의 양/에너지에 따라 결정. 3. 선택비(Selectivity): 목표 재료 대비 다른 재료를 얼마나 덜 깎는지. 현대 공정 선택비 4:1 유지. Etch stop layer 증착으로 substrate 식각 방지. Over Etch: 식각될 부위를 완벽 제거하기 위해 막질 두께 균일도 및 식각 균일도 감안하여 30% 추가 식각. 부작용: 선폭 감소, 하부 막질 손실. EPD(End Point Detection): 실시간 식각 상태 모니터링, 신호 분석으로 종료점 설정.",
+    "keywords": ["Uniformity", "Etch Rate", "Selectivity", "Over Etch", "EPD", "End Point Detection"],
+    "interviewPoints": ["선택비(Selectivity)가 왜 중요한지 — 원하는 층만 정확히 제거, 하부 구조 보호", "Over Etch는 일반적으로 30% 진행"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "etch-sti",
+    "process": "etch",
+    "topic": "STI",
+    "title": "STI (Shallow Trench Isolation)",
+    "content": "절연물질(SiO₂)로 채워 소자 간의 분리를 위해 진행하는 식각 공정. Substrate Si를 아주 좁고 깊게 Trench로 파내는 공정. PR mask 단독으로는 진행 어렵고, 멀티 하드마스크 증착 필요(Oxide-Nitride-ACL). STI 진행 후 PR과 ACL 제거를 위해 애싱 공정 진행. 마지막엔 실리콘과 적층막 표면에 잔류물들을 Cleaning 공정을 통해 제거. LOCOS를 대체하는 공정. 장점: Bird's beak 없음 → 정확한 트랜지스터 폭 확보. 현재 STI가 표준 isolation 기술.",
+    "keywords": ["STI", "Shallow Trench Isolation", "LOCOS", "Bird's beak", "Isolation"],
+    "interviewPoints": ["STI는 LOCOS 대체, Bird's beak 없어서 정확한 TR 폭 확보"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "diffusion-ion-implantation",
+    "process": "diffusion",
+    "topic": "Ion Implantation vs Diffusion",
+    "title": "확산에서 이온주입으로의 변천",
+    "content": "전통 확산(Diffusion): 고온에서 가스 형태의 불순물을 확산. 등방성 문제로 정확한 프로파일(농도/깊이)이 나오지 않음. 미세 공정에서 부적합. 이온주입(Ion Implantation): 불순물 원자를 이온화하여 전기장으로 가속, 웨이퍼에 충돌시켜 주입. 비등방성이라 정확한 위치에 정확한 깊이로 도핑 가능. 도즈(Dose)로 농도 제어, 에너지(keV)로 깊이 제어. 어닐링(Annealing): 이온 충돌로 인한 격자 손상(Lattice Damage) 발생, 불순물이 비정상 위치(Interstitial Site)에 머묾. Annealing으로 Substitutional Site로 이동시켜 활성화(Activation)하고 결정 결함 복구(Recrystallization). RTA(Rapid Thermal Annealing): 900~1100°C, 수초~수십초. Flash Annealing: ~1300°C, 밀리초. Laser Annealing: 표면만 용융, 나노초.",
+    "keywords": ["Ion Implantation", "Diffusion", "Annealing", "RTA", "Substitutional", "Interstitial", "Dose", "Energy"],
+    "interviewPoints": ["Annealing은 단순한 열처리가 아니라, 불순물 활성화와 결정 복구를 동시에 수행하는 핵심 공정", "디퓨전은 등방성 문제로 정확한 프로파일 불가 → 이온 임플란테이션은 비등방성이라 정확한 위치에 도핑 가능"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "diffusion-oxidation",
+    "process": "diffusion",
+    "topic": "산화 공정",
+    "title": "산화 공정 (Wet/Dry/Radical)",
+    "content": "습식 산화(Wet): 산화원 H₂O. 성장 속도 빠름, 두꺼운 산화막에 적합. 균일성/밀도/전기적 특성 다소 떨어짐. 용도: 필드 산화막, 패드 산화막. 건식 산화(Dry): 산화원 O₂만 사용. 성장 속도 느림, 밀도 높고 균일하며 전기적 특성 좋음. 용도: 게이트 산화막, 터널 산화막. 라디칼 산화(Radical): 산화원 O·, OH·. 결정 방향에 따른 산화 속도 차이를 완화, 3D 구조(FinFET, GAA)에서도 균일한 산화막. 낮은 온도(300~700°C)에서도 고품질 산화막. 이온 충격 없이 반응성 높은 중성 라디칼만 웨이퍼에 도달. 용도: 초박막 고품질 인터페이스층. 산화막 용도: 소자 간 분리/절연, MOSFET 게이트 산화막, 이온공정 마스크, Capacitor 유전체.",
+    "keywords": ["산화", "Wet Oxidation", "Dry Oxidation", "Radical Oxidation", "SiO2", "게이트 산화막"],
+    "interviewPoints": ["산화공정 3종류(Wet/Dry/Radical) 각각의 특징과 용도 구분", "라디칼 산화는 GAA/FinFET 등 3D 구조에서 유리"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-pvd",
+    "process": "thin-film",
+    "topic": "PVD",
+    "title": "PVD (Physical Vapor Deposition) - 스퍼터링",
+    "content": "PVD: 고체 재료를 증발시켜 물리적으로 웨이퍼 표면에 박막 형성. 화학 반응 없이 기계적/물리적 원리. 대표 방식: 스퍼터링(Sputtering). 스퍼터링 원리: Ar 가스를 진공 챔버에 주입 → 고전압(~5000V) DC 인가 → Ar이 Ar⁺ 이온으로 이온화 → Ar⁺ 이온이 타겟 물질 충돌 → 타겟 원자가 튀어나와 기판에 증착. 장점: 공정 빠르고 단순, 고순도 금속 박막, 비용 저렴. 단점: Step Coverage 나쁨(직진성), 절연막 부적합, Overhang 발생. 사용: 금속 배선층(Al, Cu), 콘택홀 확산.",
+    "keywords": ["PVD", "Sputtering", "Ar", "금속 배선", "Step Coverage", "Overhang"],
+    "interviewPoints": ["PVD의 Sputtering 원리: Ar⁺ 이온이 타겟 충돌 → 원자가 튀어나와 기판에 증착"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-cvd",
+    "process": "thin-film",
+    "topic": "CVD",
+    "title": "CVD (Chemical Vapor Deposition)",
+    "content": "CVD: 가스의 화학 반응을 통해 형성된 입자를 외부 에너지 활용해 증착. 3가지 요소: 진공, 온도, 가스 농도. 장점: 구조 내부까지 균일 코팅(Step Coverage ↑), 박막 밀도/균일도 높음, 다양한 재료 적용(SiO₂, SiN, TiN). 단점: 고온 공정 필요, 불순물 위험. PECVD(Plasma Enhanced CVD): 플라즈마로 저온 가능, 반도체 제조 가장 널리 사용. 온도 낮춰야 하는 이유: 메탈이 녹기 때문. 단점: 막질 상태 좋지 않고 낮은 Step Coverage. LPCVD: 저압, 균일성 우수.",
+    "keywords": ["CVD", "PECVD", "LPCVD", "Precursor", "Step Coverage", "절연막"],
+    "interviewPoints": ["CVD의 장점: Step Coverage 우수 — 3D 구조에서 필수"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-ald",
+    "process": "thin-film",
+    "topic": "ALD",
+    "title": "ALD (Atomic Layer Deposition) - Self-limitation",
+    "content": "ALD: 원자층 단위로 박막을 증착하는 고정밀 증착 기술. Self-limitation 반응: 1차 소스(예: Al(CH₃)₃) 공급 → 표면에 1개 층만 흡착 → Purge → 2차 소스(예: H₂O) 공급 → 치환 반응으로 1개 층 형성. 반응식: 2Al(CH₃)₃ + 3H₂O → Al₂O₃ + 6CH₄↑. ALD Window: ALD가 ALD답게 작동하는 최적 온도 범위. 온도 너무 낮으면: low reactivity 또는 condensation. 온도 너무 높으면: desorption 또는 decomposition. 장점: 얇은 두께 가능(원자층 1개씩), Step Coverage 우수(흡착 방식), 낮은 온도 공정, 갭/트랜치 벽면에도 잘 달라붙음. 단점: 속도 느림, 저온이라 막 물성 떨어짐. 용도: High-K 유전체(HfO₂), GAA 게이트 산화막, 3D NAND.",
+    "keywords": ["ALD", "Self-limitation", "ALD Window", "HfO2", "원자층", "High-K"],
+    "interviewPoints": ["ALD의 Self-limitation 원리를 정확히 설명 — 왜 한 층만 형성되는지", "ALD가 High-K Metal Gate에 쓰이는 이유: HfO₂를 원자 단위로 제어해야 하므로"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-ecp",
+    "process": "thin-film",
+    "topic": "ECP Cu Damascene",
+    "title": "전해도금법 (ECP) 및 Cu Damascene",
+    "content": "ECP(Electro-Chemical Plating): 전기화학적 도금으로 Cu를 웨이퍼 표면에 석출. Cu는 저저항/고이동도로 배선 성능 우수하지만 CVD/PVD로 깊은 트렌치/비아 균일 채움 어려움. 공정: 양극(Cu 금속판), 음극(웨이퍼). 전류 공급 → Cu²⁺ 용출 → 전해액 통해 이동 → 웨이퍼에서 e⁻ 받아 고체 Cu로 석출. 핵심 첨가제: Suppressor(상단 증착 억제), Accelerator(하부 촉진), Leveler(과도한 상단 성장 방지). Damascene 공정: Cu는 플라즈마 etch 불가능 → 홈을 먼저 파고 Cu 매립 → CMP로 평탄화. 순서: 절연막 증착 → 트렌치/비아 패턴 형성 → 배리어/라이너 증착 → Cu Seed → ECP → CMP.",
+    "keywords": ["ECP", "Damascene", "Cu", "전해도금", "Bottom-up", "Suppressor", "Accelerator"],
+    "interviewPoints": ["ECP는 전기화학적 도금 방식으로 Cu damascene에서 트렌치/비아를 bottom-up 방식으로 빈틈 없이 채우는 핵심 공정"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-silicide",
+    "process": "thin-film",
+    "topic": "Silicide",
+    "title": "Silicide (금속 실리사이드) 형성",
+    "content": "Silicide = 금속(Metal) + 실리콘(Silicon) 화합물. 형성 위치: Gate, Source, Drain 상부. 목적: 실리콘과 금속 사이의 접촉 저항(Contact resistance) 낮추기. 일반적으로 Si와 금속이 직접 만나면 높은 저항/비안정적 접촉 발생 → Silicide로 변환하여 안정적 오믹 접촉(Ohmic contact). 공정: Pre-clean → 금속 증착(Ni, Ti) → Annealing → Silicide 형성 → Photo & Etch & Clean. 대표: NiSi(니켈 실리사이드) — 선폭이 줄어드는 최신 CMOS 공정에서 표준. 상변화: Ni → Ni₂Si → NiSi(저저항 Phase).",
+    "keywords": ["Silicide", "NiSi", "TiSi2", "Ohmic contact", "접촉 저항", "Salicide"],
+    "interviewPoints": ["Silicide는 금속+Si 화합물로 접촉 저항을 낮추는 역할", "최신 CMOS에서는 NiSi가 표준"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-step-coverage",
+    "process": "thin-film",
+    "topic": "Step Coverage",
+    "title": "Step Coverage (단차 피복성)",
+    "content": "Step Coverage는 갭/트렌치와 같은 단차 구조에서 패턴의 상부, 하부, 측벽에 박막이 얼마나 균일하게 형성되었는지 평가하는 지표. 두께 분포: 상부(Top Shoulder) 가장 두꺼움 → 하부(Bottom) 상대적 안정 → 측벽(Sidewall) 가장 얇음. PVD와 Overhang: PVD는 직진성(Line-of-sight) 증착이라 단차 상부에 과도하게 쌓임 → Overhang 발생 → 트렌치 막힘. 정량화: Bottom Step Coverage = T2/T1, Side Step Coverage = T3/T1. 값이 1에 가까울수록 균일.",
+    "keywords": ["Step Coverage", "Overhang", "단차 피복성", "Sidewall", "Top Shoulder"],
+    "interviewPoints": ["Step Coverage가 왜 중요한지 — 3D 구조(FinFET, GAA, 3D NAND)에서 필수"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "thinfilm-beol",
+    "process": "thin-film",
+    "topic": "BEOL 금속 배선",
+    "title": "BEOL 금속 배선 공정",
+    "content": "BEOL(Back End Of the Line): 미세한 배선을 만들어 수십억 소자를 연결하는 공정. Aluminum Etch 금속 배선: Sputtering(PVD)으로 증착 → 패터닝 → 식각. Over Etch해서 Metal 간 Short 방지. Al 단점: 선이 얇을수록 저항 커짐, 쉽게 산화. Cu 도입 이유: 비저항 가장 낮음. Cu 단점: etch 어려움(→Damascene), SiO₂ 확산(→Barrier metal 필수). 금속 조건: 웨이퍼 부착성, 낮은 전기 저항, 열적/화학적 안정성, 패턴 형성 용이성, 높은 신뢰성, 대량 생산 가격.",
+    "keywords": ["BEOL", "금속 배선", "Aluminum", "Copper", "Damascene", "Barrier metal"],
+    "interviewPoints": ["Al에서 Cu로 변경한 이유: 비저항이 낮아 RC delay 감소"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "spc-fdc",
+    "process": "general",
+    "topic": "SPC/FDC",
+    "title": "SPC와 FDC 공정 관리",
+    "content": "SPC(Statistical Process Control): 데이터를 통한 통계적 자료와 분석 기법으로 공정 능력 상태를 파악하고 원하는 상태로 제품이 생산될 수 있도록 관리. 결과 기반 품질 관리. FDC(Fault Detection & Classification): 설비의 이상 징후를 조기에 감지하고 원인을 분류. 설비 센서 데이터/공정 데이터를 실시간 수집 → 정상 패턴과 비교 → 이상 여부 판단. FDC 파라미터: Pressure, Temperature, Gas Flow, RF Power/Voltage/Current, Rotation/Speed, Valve Position. 중요성: 불량 웨이퍼 조기 차단 → 생산성 향상, 빅데이터/AI/ML 적용하여 예지보전(Predictive Maintenance)으로 확장.",
+    "keywords": ["SPC", "FDC", "통계적 공정 관리", "Fault Detection", "예지보전"],
+    "interviewPoints": ["SPC는 결과 기반, FDC는 원인 기반 품질 관리", "FDC 파라미터 = 장비가 실시간으로 뱉어내는 센서 값들"],
+    "source": "hynix-5대공정-pdf"
+  },
+  {
+    "id": "hkmg",
+    "process": "general",
+    "topic": "HKMG",
+    "title": "HKMG (High-K Metal Gate)",
+    "content": "HKMG: 누설전류를 효과적으로 줄일 수 있도록 개발된 새로운 MOSFET 게이트. 기존 다결정 실리콘(Polysilicon) 게이트 → 금속(TiN/TaN)으로 대체, 산화규소(SiO₂) 절연막 → 고유전체(HfO₂, High-K)로 대체. 공정 미세화로 게이트 산화막 두께가 수 nm로 얇아지면서 누설전류(Leakage Current) 문제 발생. High-K: 유전율이 높아 물리적으로 두꺼운 막을 사용하면서도 전기적으로 얇은 효과(낮은 EOT). Metal Gate: Polysilicon의 공핍층(Depletion) 문제 해결. ALD로 HfO₂를 원자 단위로 정밀 증착.",
+    "keywords": ["HKMG", "High-K", "Metal Gate", "HfO2", "누설전류", "EOT", "ALD"],
+    "interviewPoints": ["반드시 High-K와 Metal Gate를 분리해서 답해야 함", "High-K는 터널링 문제 해결, Metal Gate는 공핍층 문제 해결"],
+    "source": "hynix-5대공정-pdf"
+  }
+]
